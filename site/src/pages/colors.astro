@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const interior = {
+  brand: 'Behr',
+  colors: [
+    { name: 'Swiss Coffee', finish: 'flat', location: 'Almost whole house', hex: '#F2E8D8' },
+    { name: 'Swiss Coffee', finish: 'semi-gloss', location: 'Kitchen', hex: '#F2E8D8' },
+    { name: 'Taupe Mist', finish: 'semi-gloss', location: 'Bathrooms', hex: '#B8A898' },
+    { name: 'White', finish: 'high gloss', location: 'All trim', hex: '#F8F8F6' },
+    { name: 'White', finish: 'flat', location: 'All ceilings', hex: '#FAFAFA' },
+  ],
+};
+
+const exterior = {
+  brand: 'Benjamin Moore',
+  colors: [
+    { name: 'Iron Gate 1545', finish: 'semi-gloss', location: 'All walls', hex: '#454E4C' },
+    { name: 'Briarwood', finish: 'flat', location: 'Foundation', hex: '#9A7F62' },
+    { name: 'White', finish: 'semi-gloss', location: 'Trim', hex: '#F6F4EE' },
+    { name: 'Back I-80', finish: 'semi-gloss', location: 'Doors', hex: '#2A2D2C' },
+  ],
+};
+---
+
+<Layout title="Paint Colors" activePage="colors">
+  <div class="page-header">
+    <h1>Paint Colors</h1>
+    <p>Interior and exterior palette for reference</p>
+  </div>
+
+  <div class="two-col">
+    <div class="section">
+      <span class="brand-badge">{interior.brand}</span>
+      <div class="section-title">Interior</div>
+      <div class="swatch-grid">
+        {interior.colors.map(c => (
+          <div class="swatch-row">
+            <div class="swatch" style={`background:${c.hex}`}></div>
+            <div class="swatch-info">
+              <div class="swatch-name">{c.name}</div>
+              <div class="swatch-detail">{c.finish} &mdash; {c.location}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="section">
+      <span class="brand-badge">{exterior.brand}</span>
+      <div class="section-title">Exterior</div>
+      <div class="swatch-grid">
+        {exterior.colors.map(c => (
+          <div class="swatch-row">
+            <div class="swatch" style={`background:${c.hex}`}></div>
+            <div class="swatch-info">
+              <div class="swatch-name">{c.name}</div>
+              <div class="swatch-detail">{c.finish} &mdash; {c.location}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</Layout>

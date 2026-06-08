@@ -1,0 +1,48 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  activePage?: 'dashboard' | 'colors';
+}
+
+const { title, activePage } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} — House</title>
+  <meta name="description" content="Issue tracker for my house" />
+  <link rel="icon" href={`${base}/favicon.svg`} type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href={`${base}/`} class="nav-brand">
+        <span class="nav-title">House</span>
+        <span class="nav-repo">nhall/house</span>
+      </a>
+      <nav class="nav-links">
+        <a href={`${base}/`} class:list={[{ active: activePage === 'dashboard' }]}>Dashboard</a>
+        <a href={`${base}/colors`} class:list={[{ active: activePage === 'colors' }]}>Paint Colors</a>
+        <a href="https://github.com/nhall/house" target="_blank" rel="noopener">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="site-footer">
+    <p>Data from <a href="https://github.com/nhall/house/issues">GitHub Issues</a> &middot; Built {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+  </footer>
+</body>
+</html>
+
