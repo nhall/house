@@ -2,7 +2,7 @@
 
 [![Deploy site](https://github.com/nhall/house/actions/workflows/deploy.yml/badge.svg)](https://github.com/nhall/house/actions/workflows/deploy.yml)
 
-A bug tracker for my house — open issues are things that need fixing, closed issues are things that got fixed. Inspired by [frabcus/house](https://github.com/frabcus/house).
+A bug tracker for my house — open issues are things that need fixing, closed issues are things that got fixed.
 
 **[View the dashboard →](https://nhall.github.io/house/)**
 
