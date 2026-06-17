@@ -3,7 +3,7 @@
 [![Deploy site](https://github.com/nhall/house/actions/workflows/deploy.yml/badge.svg)](https://github.com/nhall/house/actions/workflows/deploy.yml)
 [![Issues closed](https://img.shields.io/github/issues-closed/nhall/house?color=4ECBA0&label=fixed)](https://github.com/nhall/house/issues?q=is%3Aissue+is%3Aclosed)
 [![Issues open](https://img.shields.io/github/issues/nhall/house?color=F4923A&label=open)](https://github.com/nhall/house/issues)
-[![Last fix](https://img.shields.io/github/last-commit/nhall/house?label=last+activity)](https://github.com/nhall/house/commits/master)
+[![Last fix](https://img.shields.io/github/last-commit/nhall/house?label=last+activity)](https://github.com/nhall/house/commits/main)
 [![Site](https://img.shields.io/website?url=https%3A%2F%2Fnhall.github.io%2Fhouse%2F&label=dashboard)](https://nhall.github.io/house/)
 [![Built with Astro](https://img.shields.io/badge/built%20with-Astro-FF5D01?logo=astro&logoColor=white)](https://astro.build)
 
@@ -19,7 +19,7 @@ A bug tracker for my house — open issues are things that need fixing, closed i
 
 ## Site
 
-The dashboard lives in `site/` and deploys to GitHub Pages via GitHub Actions on every push to `master`. It also rebuilds nightly at 8am UTC to pick up any issue activity.
+The dashboard lives in `site/` and deploys to GitHub Pages via GitHub Actions on every push to `main`. It also rebuilds nightly at 8am UTC to pick up any issue activity.
 
 ## Dependencies
 
